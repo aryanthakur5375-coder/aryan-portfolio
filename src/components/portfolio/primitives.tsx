@@ -1,6 +1,37 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import * as icons from "lucide-react";
+import {
+  BarChart3,
+  Briefcase,
+  Compass,
+  Cpu,
+  GraduationCap,
+  Landmark,
+  LineChart,
+  Linkedin,
+  Mail,
+  Sparkles,
+  Target,
+  TrendingUp,
+  Workflow,
+  type LucideIcon,
+} from "lucide-react";
+
+const iconMap: Record<string, LucideIcon> = {
+  BarChart3,
+  Briefcase,
+  Compass,
+  Cpu,
+  GraduationCap,
+  Landmark,
+  LineChart,
+  Linkedin,
+  Mail,
+  Sparkles,
+  Target,
+  TrendingUp,
+  Workflow,
+};
 
 export function Section({
   id,
@@ -54,10 +85,8 @@ export function Card({ className, children }: { className?: string; children: Re
   );
 }
 
-type IconName = keyof typeof icons;
-
 export function Icon({ name, className }: { name: string; className?: string }) {
-  const Cmp = (icons as unknown as Record<string, icons.LucideIcon>)[name as IconName as string];
+  const Cmp = iconMap[name];
   if (!Cmp) return null;
   return <Cmp className={cn("h-5 w-5", className)} strokeWidth={1.6} aria-hidden="true" />;
 }
