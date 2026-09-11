@@ -72,7 +72,7 @@ function ProjectCard({ project, featured = false }: { project: (typeof projects)
             ))}
           </ul>
         </div>
-        {project.architecture && (
+        {"architecture" in project && project.architecture && (
           <div className="border-t border-border pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
             <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">Architecture flow</h4>
             <div className="mt-4 flex flex-wrap items-center gap-2">
@@ -84,7 +84,7 @@ function ProjectCard({ project, featured = false }: { project: (typeof projects)
               ))}
             </div>
             <div className="mt-4 space-y-2 border-l border-foreground/30 pl-4 text-xs leading-5 text-muted-foreground">
-              {project.branches?.map((branch) => <p key={branch}>{branch}</p>)}
+              {"branches" in project && project.branches?.map((branch) => <p key={branch}>{branch}</p>)}
             </div>
           </div>
         )}
@@ -147,7 +147,7 @@ export function Certifications() {
 
 export function CurrentFocus() {
   return (
-    <Section id="focus" eyebrow="Current Focus" title="What I&apos;m currently exploring">
+    <Section id="focus" eyebrow="Current Focus" title="What I'm currently exploring">
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {currentFocus.map((item) => <Card key={item.title} className="p-5"><Icon name={item.icon} className="h-6 w-6 text-foreground" /><h3 className="mt-5 font-display text-base font-semibold text-foreground">{item.title}</h3><p className="mt-2 text-sm leading-7 text-muted-foreground">{item.description}</p></Card>)}
       </div>

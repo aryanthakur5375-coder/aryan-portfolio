@@ -28,7 +28,7 @@ export function Contact() {
   }
 
   return (
-    <Section id="contact" eyebrow="Contact" title="Let&apos;s connect" description="I'm always interested in learning, building, and connecting with people working on interesting technology and software projects.">
+    <Section id="contact" eyebrow="Contact" title="Let's connect" description="I'm always interested in learning, building, and connecting with people working on interesting technology and software projects.">
       <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
         <div className="space-y-5">
           <div className="space-y-4 text-sm">
@@ -61,14 +61,14 @@ export function Footer() {
     <footer className="border-t border-border/70">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-5 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
         <div><p className="font-display text-sm font-semibold text-foreground">{profile.name}</p><p className="mt-1 text-xs text-muted-foreground">Computer Science Student · Backend Development · Agentic AI</p></div>
-        <div className="flex items-center gap-3">{socials.map((social) => <a key={social.label} href={social.url} target={social.label === "Email" ? undefined : "_blank"} rel={social.label === "Email" ? undefined : "noreferrer"} aria-label={social.label} className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground"><socialIcon name={social.icon} /></a>)}</div>
+        <div className="flex items-center gap-3">{socials.map((social) => <a key={social.label} href={social.url} target={social.label === "Email" ? undefined : "_blank"} rel={social.label === "Email" ? undefined : "noreferrer"} aria-label={social.label} className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground"><SocialIcon name={social.icon} /></a>)}</div>
         <p className="text-xs text-muted-foreground">© 2026 {profile.name}. All rights reserved.</p>
       </div>
     </footer>
   );
 }
 
-function socialIcon({ name }: { name: string }) {
+function SocialIcon({ name }: { name: string }) {
   if (name === "Github") return <Github className="h-4 w-4" />;
   if (name === "Linkedin") return <Linkedin className="h-4 w-4" />;
   return <Mail className="h-4 w-4" />;
