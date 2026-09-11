@@ -78,14 +78,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Aryan Thakur | Computer Science Portfolio" },
+      { name: "description", content: "Personal portfolio of Aryan Thakur, a Computer Science student focused on backend development and Agentic AI." },
+      { name: "author", content: "Aryan Thakur" },
+      { property: "og:title", content: "Aryan Thakur | Computer Science Portfolio" },
+      { property: "og:description", content: "Personal portfolio of Aryan Thakur, a Computer Science student focused on backend development and Agentic AI." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
