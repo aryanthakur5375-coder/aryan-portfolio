@@ -1,27 +1,28 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/portfolio/Nav";
 import { Hero } from "@/components/portfolio/Hero";
-import { About, Achievements, Education, Interests, Projects, Skills } from "@/components/portfolio/Sections";
+import { About, Achievements, Certifications, CurrentFocus, Education, Projects, Skills } from "@/components/portfolio/Sections";
 import { Contact, Footer, Resume } from "@/components/portfolio/ContactAndFooter";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aryan Thakur — Commerce Student & Aspiring Business Professional" },
+      { title: "Aryan Thakur | CS Student & Backend Developer" },
       {
         name: "description",
         content:
-          "Portfolio of Aryan Thakur — B.Com student interested in business, finance, technology and professional growth. View education, skills, achievements and get in touch.",
+          "Personal portfolio of Aryan Thakur — Computer Science student focused on backend development, APIs, databases and Agentic AI.",
       },
-      { property: "og:title", content: "Aryan Thakur — Commerce Student & Aspiring Business Professional" },
+      { property: "og:title", content: "Aryan Thakur | CS Student & Backend Developer" },
       {
         property: "og:description",
         content:
-          "Portfolio of Aryan Thakur — B.Com student interested in business, finance, technology and professional growth.",
+          "Personal portfolio of Aryan Thakur — Computer Science student focused on backend development, APIs, databases and Agentic AI.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
@@ -33,11 +34,12 @@ function Index() {
       <main>
         <Hero />
         <About />
-        <Education />
         <Skills />
-        <Achievements />
         <Projects />
-        <Interests />
+        <Education />
+        <Achievements />
+        <Certifications />
+        <CurrentFocus />
         <Resume />
         <Contact />
       </main>
