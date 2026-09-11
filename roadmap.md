@@ -1,3 +1,3 @@
-- [ ] Replace editable portfolio content with Aryan's CS, backend, and Agentic AI details
-- [ ] Rebuild the one-page sections, project architecture visual, links, resume, and contact form
-- [ ] Update page metadata and verify the preview has no build or runtime errors
+- [x] Replace editable portfolio content with Aryan's CS, backend, and Agentic AI details
+- [x] Rebuild the one-page sections, project architecture visual, links, resume, and contact form
+- [x] Update page metadata and verify the preview has no build or runtime errors
